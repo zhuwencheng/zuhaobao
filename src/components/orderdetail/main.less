@@ -1,0 +1,112 @@
+@import "../../css/var.less";
+  
+.tran-dialog{
+  line-height: 40px;
+  label{
+    display: inline-block;
+    text-align: right;
+    width: 100px;
+    margin-right: 10px;
+  }
+  .choose-time{
+    margin-left: 110px;
+    span{
+      cursor: pointer;
+      font-size: 1.2rem;
+      margin-right: 5px;
+      color: @c-blue1;
+    }
+  }
+}
+.orderDetail{
+  padding: 20px 15px;
+  overflow: hidden;
+  text-align: left;
+  color: @c-5;
+
+  .form{
+    .form-item{
+      margin-bottom: 15px;
+      .l-label{
+        width: 75px;
+        display: inline-block;
+        box-sizing: border-box;
+        text-align: right;
+        padding-right: 10px;
+      }
+      .d-input{
+        display: inline-block;
+        width: 95px;
+        &.f-input{
+          width: 615px;
+        }
+      }
+      .d-select{
+        width: 90px;
+      }
+      .unit{
+        margin-right: 10px;
+      }
+      .d-area{
+        width: 615px;
+        vertical-align: middle;
+      }
+    }
+  }
+  .tran-detail{
+    overflow: hidden;
+    zoom: 1;
+    border-top: 1px dashed @border-c;
+    padding: 20px 0;
+    font-size: 1.2rem;
+    ul{
+      line-height: 40px;
+      overflow: hidden;
+      float: left;
+      width: 250px;
+      em{
+        font-style: normal;
+      }
+      .blue{
+        color: #4aa7dd;
+      }
+      .red{
+        font-size: 1.4rem;
+        color: @red;
+        font-weight: bold;
+      }
+    }
+    .r-detail{
+      margin-left: 250px;
+      border:1px solid #65c6f4;
+      background: #f6fcff;
+      padding: 20px 30px;
+      line-height: 38px;
+      width: 380px;
+      .cout-time{
+        display: inline-block;
+        font-style: normal;
+      }
+    }
+    .r-code{
+      margin-left: 250px;
+      overflow: hidden;
+      .img{
+        width: 60px;
+        height: 60px;
+        float: left;
+        border: 3px solid #f5f5f5;
+      }
+      p{
+        margin-left: 200px;
+        width: 200px;
+        line-height: 2.2em;
+        margin-top: 20px;
+        font-size: 1.4rem;
+      }
+    }
+  }
+  .btn-wrapper{
+    padding-top: 30px;
+  }
+}

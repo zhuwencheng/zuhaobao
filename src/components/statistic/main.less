@@ -1,0 +1,154 @@
+@import "../../css/var.less";
+@c-border:#dce8f0;
+.statistic{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  padding: 20px 0;
+  // 头部菜单
+  .menu{
+    line-height: 40px;
+    padding: 0 15px;
+    overflow: hidden;
+    .gamelist-menu{
+      span{
+        width: 85px;
+        display: inline-block;
+        background: #65c6f4;
+        text-align: center;
+        color: @fff;
+        margin-right: 6px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        cursor: pointer;
+        &.active,&:hover{
+          background: #1197d7;
+          cursor: default;
+        }
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+    .sys-menu{
+      a{
+        display: inline-block;
+        padding-left: 25px;
+        color: @c-4;
+        background: left center no-repeat;
+        margin-left: 10px;
+        &.sp{
+          background-image:url(../../images/sp.png); 
+          &.active,&:hover{
+            background-image:url(../../images/sp-hover.png); 
+          }
+        }
+        &.dd{
+          background-image:url(../../images/dd.png); 
+          &.active,&:hover{
+            background-image:url(../../images/dd-hover.png); 
+          }
+        }
+        &.tj{
+          background-image:url(../../images/tj.png); 
+          &.active,&:hover{
+            background-image:url(../../images/tj-hover.png); 
+          }
+        }
+        &.sz{
+          background-image:url(../../images/sz.png); 
+          &.active,&:hover{
+            background-image:url(../../images/sz-hover.png); 
+          }
+        }
+      }
+    }
+  }
+  // 筛选条件
+  .filter{
+    background: @f7;
+    overflow: hidden;
+    .filter-item{
+      border-bottom: 1px solid @c-border;
+      padding: 15px 10px;
+      overflow: hidden;
+      &:last-child{
+        border-bottom: 0;
+      }
+      .red{
+        color: @red;
+      }
+      select{
+        height: 30px;
+        line-height: 30px;
+        border-color: #bfbfbf;
+        padding: 0 8px;
+        border-radius: 4px;
+        margin-right: 8px;
+        margin-left: 60px;
+        outline: none;
+        color: @c-4;
+        vertical-align: middle;
+      }
+      .search-box{
+        display: inline-block;
+        margin-left: -15px;
+        height: 30px;
+        overflow: hidden;
+        vertical-align: middle;
+        input{
+          height: 30px;
+          line-height: 30px;
+          border: 1px solid #bfbfbf;
+          box-sizing: border-box;
+          padding: 0 10px;
+          outline: none;
+          width: 200px;
+          vertical-align: middle;
+          float: left;
+        }
+        span{
+          background: url(../../images/ss.png) center center no-repeat #1197d7;
+          width: 30px;
+          height: 30px;
+          display: inline-block;
+          cursor: pointer;
+          vertical-align: middle;
+          float: right;
+          margin-left: -1px;
+        }
+      }
+      .op{
+        display: inline-block;
+        width: 70px;
+        overflow: hidden;
+        text-align: center;
+        color: @fff;
+        font-size: 12px;
+        float: left;
+        margin-right: 10px;
+        height: 30px;
+        line-height: 30px;
+        background: #bab3b3;
+        border-radius: 4px;
+        &:hover,&.active{
+          background: #1097d7;
+          color: @fff;
+          cursor: pointer;
+        }
+        &.active{
+          cursor: default;
+        }
+      }
+    }
+  }
+  .page{
+    position: absolute;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

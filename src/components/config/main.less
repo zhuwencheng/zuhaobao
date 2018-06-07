@@ -1,0 +1,93 @@
+@import "../../css/var.less";
+.config{
+  width: 715px;
+  margin: 0 auto;
+  text-align: center;
+  h3{
+    line-height: 150px;
+    font-size: 28px;
+    text-align: center;
+    color: @c-4;
+  }
+  .game-item{
+    height: 65px;
+    box-sizing: border-box;
+    display: flex;
+    border:1px solid @border-c;
+    margin-top: -1px;
+    text-align: left;
+    &:last-child{
+      overflow: hidden;
+    }
+    .l-game-logo{
+      width: 200px;
+      background: @f7;
+      line-height: 65px;
+      border-bottom: 1px solid @fff;
+      margin-bottom: -1px;
+      color: @c-4;
+      img{
+        width: 70px;
+        height: 50px;
+        float: left;
+        margin: 7px 10px;
+      }
+    }
+    .r-game-tool{
+      flex:1;
+      padding: 12px 35px 11px 10px;
+      line-height: 40px;
+      .btn{
+        cursor: pointer;
+        width: 110px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 1.4rem;
+        color: @fff;
+        border-radius: 4px;
+        background: @btn-primary;
+        float: left;
+        margin-left: 35px;
+        &.disabled{
+          background-color: @btn-dis;
+        }
+      }
+      .to-top{
+        color: @c-b9;
+        cursor: pointer;
+      }
+      .to{
+        cursor: pointer;
+        width: 30px;
+        margin-right: 10px;
+        height: 40px;
+        display: inline-block;
+        background: center center no-repeat;
+        &.next{
+          background-image: url(../../images/down.png);
+          &:hover{
+            background-image: url(../../images/down-hover.png);
+          }
+        }
+        &.pre{
+          background-image: url(../../images/up.png);
+          &:hover{
+            background-image: url(../../images/up-hover.png);
+          }
+        }
+      }
+    }
+  }
+  .next-step{
+    width: 160px;
+    line-height: 45px;
+    background: @btn-primary;
+    color: @fff;
+    text-align: center;
+    display: inline-block;
+    margin: 90px auto 0;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}

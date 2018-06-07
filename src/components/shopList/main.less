@@ -1,0 +1,250 @@
+@import "../../css/var.less";
+@c-border:#dce8f0;
+.shoplist{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  padding: 20px 0;
+  // 头部菜单
+  .menu{
+    line-height: 40px;
+    padding: 0 15px;
+    overflow: hidden;
+    .gamelist-menu{
+      span{
+        width: 85px;
+        display: inline-block;
+        background: #65c6f4;
+        text-align: center;
+        color: @fff;
+        margin-right: 6px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        cursor: pointer;
+        &.active,&:hover{
+          background: #1197d7;
+          cursor: default;
+        }
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+    .sys-menu{
+      a{
+        display: inline-block;
+        padding-left: 25px;
+        color: @c-4;
+        background: left center no-repeat;
+        margin-left: 10px;
+        &.sp{
+          background-image:url(../../images/sp.png); 
+          &.active,&:hover{
+            background-image:url(../../images/sp-hover.png); 
+          }
+        }
+        &.dd{
+          background-image:url(../../images/dd.png); 
+          &.active,&:hover{
+            background-image:url(../../images/dd-hover.png); 
+          }
+        }
+        &.tj{
+          background-image:url(../../images/tj.png); 
+          &.active,&:hover{
+            background-image:url(../../images/tj-hover.png); 
+          }
+        }
+        &.sz{
+          background-image:url(../../images/sz.png); 
+          &.active,&:hover{
+            background-image:url(../../images/sz-hover.png); 
+          }
+        }
+      }
+    }
+  }
+  // 筛选条件
+  .filter{
+    background: @f7;
+    overflow: hidden;
+    padding: 0 10px;
+    .filter-item{
+      border-bottom: 1px solid @c-border;
+      display: table;
+      width: 100%;
+      min-height: 40px;
+      &:last-child{
+        border-bottom: 0;
+      }
+      .label{
+        text-align: center;
+        width: 90px;
+        display: table-cell;  
+        vertical-align: middle;  
+        border-right: 1px solid @c-border;
+      }
+      .refesh{
+        font-size: 1.2rem;
+        color: @c-blue1;
+        margin:0 10px;
+        cursor: pointer;
+      }
+      .filter-list{
+        padding: 10px;
+        overflow: hidden;
+        &.single{
+          line-height: 35px;
+          span{
+            display: inline-block;
+            width: 4em;
+            overflow: hidden;
+            padding: 0 10px;
+            color: #8a8a8a;
+            font-size: 12px;
+            float: left;
+            margin-right: 1px;
+            height: 35px;
+            &:hover,&.active{
+              background: #1097d7;
+              color: @fff;
+              cursor: pointer;
+            }
+            &.active{
+              cursor: default;
+            }
+          }
+        }
+        .least-time{
+          display: inline-block;
+          vertical-align: middle;
+        }
+        &.multiselect{
+          line-height: 30px;
+          overflow: hidden;
+          .search-box{
+            display: inline-block;
+            margin-left: -15px;
+            height: 30px;
+            overflow: hidden;
+            vertical-align: middle;
+            margin-top: -3px;
+            input{
+              height: 30px;
+              line-height: 30px;
+              border: 1px solid #bfbfbf;
+              box-sizing: border-box;
+              padding: 0 10px;
+              outline: none;
+              width: 200px;
+              vertical-align: middle;
+              float: left;
+            }
+            span{
+              background: url(../../images/ss.png) center center no-repeat #1197d7;
+              width: 30px;
+              height: 30px;
+              display: inline-block;
+              cursor: pointer;
+              vertical-align: middle;
+              float: right;
+              margin-left: -1px;
+            }
+          }
+          .op{
+            width: 80px;
+            line-height: 28px;
+            height: 30px;
+            box-sizing: border-box;
+            border:1px solid #9f9f9f;
+            text-align: center;
+            margin-right: 6px;
+            display: inline-block;
+            font-size: 1.2rem;
+            color: @c-4;
+            background: url(../../images/z.png) right bottom no-repeat;
+            cursor: pointer;
+            &.active,&:hover{
+              background-image: url(../../images/z-hover.png);
+              border-color: #1498d7;
+            }
+          }
+          select{
+            height: 30px;
+            line-height: 30px;
+            border-color: #bfbfbf;
+            padding: 0 8px;
+            border-radius: 4px;
+            margin-right: 8px;
+            outline: none;
+            color: @c-4;
+          }
+        }
+      }
+    }
+  }
+  .tip{
+    line-height: 30px;
+    height: 30px;
+    padding: 0 10px;
+    color: @red;
+    font-size: 1.2rem;
+    .fr{
+      float: right;
+      color: #1498d7;
+      margin-left:10px;
+      cursor: pointer;
+    }
+  }
+  .shoplist-table{
+    height: 482px;
+    overflow-y: auto;
+    table{
+      text-align: left;
+      color: @c-4;
+      table-layout: fixed;
+      th{
+        line-height: 48px;
+        background: #1197d7;
+        color: #fff;
+        font-weight: bold;
+        border:1px solid #2daae5;
+        padding: 0 10px;
+      }
+      td{
+        line-height: 35px;
+        height: 35px;
+        overflow: hidden;
+        border:1px solid #d3d3d3;
+        font-size: 12px;
+        background: #efefef;
+        padding: 0 10px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      tr{
+        cursor: pointer;
+       &:hover{
+        td{
+          background: #65c6f4 !important;
+          color: @fff;
+        }
+       }
+       &.us{
+         td{
+           background: @fff;
+         }
+       }
+      }
+    }
+  }
+  .page{
+    position: absolute;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

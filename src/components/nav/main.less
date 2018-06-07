@@ -1,0 +1,34 @@
+@import "../../css/var.less";
+.sys-menu{
+  a{
+    display: inline-block;
+    padding-left: 25px;
+    color: @c-4;
+    background: left center no-repeat;
+    margin-left: 10px;
+    &.sp{
+      background-image:url(../../images/sp.png); 
+      &.active,&:hover{
+        background-image:url(../../images/sp-hover.png); 
+      }
+    }
+    &.dd{
+      background-image:url(../../images/dd.png); 
+      &.active,&:hover{
+        background-image:url(../../images/dd-hover.png); 
+      }
+    }
+    &.tj{
+      background-image:url(../../images/tj.png); 
+      &.active,&:hover{
+        background-image:url(../../images/tj-hover.png); 
+      }
+    }
+    &.sz{
+      background-image:url(../../images/sz.png); 
+      &.active,&:hover{
+        background-image:url(../../images/sz-hover.png); 
+      }
+    }
+  }
+}

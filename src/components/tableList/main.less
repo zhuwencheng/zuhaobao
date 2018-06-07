@@ -1,0 +1,47 @@
+@import "../../css/var.less";
+.shoplist-table{
+  position: relative;
+  table{
+    text-align: center;
+    color: @c-4;
+    table-layout: fixed;
+    th{
+      line-height: 48px;
+      background: #1197d7;
+      color: #fff;
+      font-weight: bold;
+      border:1px solid #2daae5;
+      padding: 0 5px;
+      font-size: 1.2rem;
+    }
+    td{
+      line-height: 35px;
+      height: 35px;
+      overflow: hidden;
+      border:1px solid #d3d3d3;
+      font-size: 12px;
+      //-webkit-transform:scale(0.8);
+      background: #efefef;
+      padding: 0 10px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      &.t-l{
+        text-align: left;
+      }
+    }
+    tr{
+      cursor: pointer;
+     &:hover,&.active{
+      td{
+        background: #65c6f4 !important;
+        color: @fff;
+      }
+     }
+     &.us{
+       td{
+         background: @fff;
+       }
+     }
+    }
+  }
+}
